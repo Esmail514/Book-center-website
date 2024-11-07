@@ -1,12 +1,5 @@
 :root{
-  --blue: #3498db;
-  --red: #e74c3c;
-  --orange:#f39c12;
-  --black:#333;
-  --white:#fff;
-  --light-bg:#eee;
-  --box-shadow:0 5px 10px rgba(0,0,0,0.1);
-  --border:2px solid var(--black);
+  --green : green;
 }
 *{
   margin: 0;
@@ -20,7 +13,6 @@ body{
 
 header {
   width: 100%;
-  /* position: fixed; */
   z-index: 999;
   display: flex;
   justify-content: space-between;
@@ -30,7 +22,7 @@ header {
 
 .logo {
   text-decoration: none;
-  color: #f7c847; 
+  color: var(--green); 
   text-transform:uppercase; 
   font-weight: 450;
   font-size: 33px;
@@ -43,13 +35,10 @@ color:#fcdaa5;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
-  margin-left: 20px;
-  /* padding-left: 30px; */
-  
+  margin-left: 20px;  
 }
 .navigation a:hover{
-  /* color: rgba(97, 88, 76, 0.918); */
-  border-bottom: 2px solid rgb(236, 223, 205);
+  border: 2px solid rgb(236, 223, 205);
 }
 
 
