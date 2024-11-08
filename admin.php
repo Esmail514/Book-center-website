@@ -3,42 +3,51 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="CSS/try2.css">
-    <link rel="stylesheet" href="CSS/all.min.css">
-    <link rel="stylesheet" href="CSS/fontawesome.min.css">
-    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style2.css">
+
 </head>
 
 <body>
-    <header>
-        <a href="#" class="logo">Book Center</a>
-        <div class="navigation">
-            <form action="" method="post">
-                <input type="text" name="search" placeholder="search">
-                <input type="submit" name="se" value="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </form>
-            <form method="post">
-                <input type="submit" name="logout" value="Logout" >
-            </form>
+    <table class="content-table">
+        <a href="logout.php" class="btn">logout</a>
+        <span class="yy">|</span> <a href="register_form.php" class="Add">Add New</a>
+        <a href="Home.html">
+            <h2>Book<span class="I">I</span>Center</h2>
+        </a>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Size</th>
+
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr class="active-row">
+                <td></td>
+                <td></td>
+                <td></td>
 
 
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">item-name</th>
-                        <th scope="col">item-no</th>
-                        <th scope="col">item-price</th>
-                        <th scope="col">item-image</th>
-                    </tr>
-                </thead>
 
-            </table>
-        </div>
-    </header>
+                <td>
+                    <a href=" " class="mod"><img src="mod.png"></a> |
+                    <a href="" class="dl"><img src="icon.png"></a>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="3" style="text-align: center; color: #f00">Data not found</td>
+            </tr>
+
+        </tbody>
+    </table>
+
 </body>
 
 </html>
