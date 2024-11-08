@@ -13,13 +13,8 @@
 <body>
     <table class="content-table">
         <a href="logout.php" class="btn">logout</a>
-        <span class="yy">|</span> <a href="register_form.php" class="Add">Add New Admin</a>
-        <a href="add.php" class="btn1">Add book</a> <span class="yy">|</span> 
-        <input type="text" class="search" placeholder="Search"> 
-        <input type="submit" value="Search" class="search">
-        <a href="Home.html">
             <h2>Book<span class="I">I</span>Center</h2>
-        </a>
+        
         <thead>
             <tr>
                 <th>ID</th>
@@ -39,8 +34,7 @@
 
 
                 <td>
-                    <a href=" " class="mod"><img src="./img/mod.png"></a> |
-                    <a href="" class="dl"><img src="./img/icon.png"></a>
+                    <a href="">Download</a>
                 </td>
             </tr>
 

@@ -11,7 +11,7 @@
 <body>
 <div class="container">
         <form method="post">
-            <h2>New account</h2>
+            <h2>New admin</h2>
 
             <div class="input-group">
                 <label>UserName</label>
@@ -29,9 +29,8 @@
                 <input type="password" name="Confirmpassword" id="password" placeholder="Confirm Password" onkeyup="validatePass()">
                 <span id="Confirmpassword-error"></span>
             </div>
-            <input type="submit" name="submit" class="btn" value="Sign-up" onclick="return validateForm()">
+            <input type="submit" name="submit" class="btn" value="Add admin" onclick="return validateForm()">
             <span id="submit-error"></span>
-            <a href="index.php">Have an account?</a>
     </div>
 </body>
 </html>
