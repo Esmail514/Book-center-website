@@ -12,8 +12,8 @@
 
 <body>
     <table class="content-table">
-        <a href="logout.php" class="btn">logout</a>
-        <span class="yy">|</span> <a href="register_form.php" class="Add">Add New Admin</a>
+        <a href="index.php" class="btn">logout</a>
+        <span class="yy">|</span> <a href="registerAdmin.php" class="Add">Add New Admin</a>
         <a href="add.php" class="btn1">Add book</a> <span class="yy">|</span> 
         <input type="text" class="search" placeholder="Search"> 
         <input type="submit" value="Search" class="search">

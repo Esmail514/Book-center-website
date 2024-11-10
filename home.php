@@ -12,7 +12,7 @@
 
 <body>
     <table class="content-table">
-        <a href="logout.php" class="btn">logout</a>
+        <a href="index.php" class="btn">logout</a>
             <h2>Book<span class="I">I</span>Center</h2>
         
         <thead>
