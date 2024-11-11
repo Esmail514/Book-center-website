@@ -9,13 +9,26 @@
     <link rel="stylesheet" href="CSS/fontawesome.min.css">
 </head>
 <body>
+
+<?php
+include 'connect.php';
+$table = "admin";
+if(isset($_POST['submit'])){
+    $name = $_POST['name'];
+    $password = $_POST['password'];
+
+    $insert = "INSERT INTO $table (name, password) VALUES ('$name' , '$password')";
+    mysqli_query($conn, $insert);
+}
+?>
+
 <div class="container">
         <form method="post">
             <h2>New admin</h2>
 
             <div class="input-group">
                 <label>UserName</label>
-                <input type="text" name="username" id="username" placeholder="UserName" onkeyup="validateName()">
+                <input type="text" name="name" id="name" placeholder="Name" onkeyup="validateName()">
                 <span id="username-error"></span>
             </div>
 

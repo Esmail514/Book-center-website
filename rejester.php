@@ -8,6 +8,20 @@
 
 </head>
 <body>
+
+
+<?php
+include 'connect.php';
+$table = "users";
+if(isset($_POST['submit'])){
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $insert = "INSERT INTO $table (username, password) VALUES ('$username' , '$password')";
+    mysqli_query($conn, $insert);
+}
+?>
+
 <div class="container">
         <form method="post">
             <h2>New account</h2>
