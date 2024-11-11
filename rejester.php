@@ -23,28 +23,29 @@ if(isset($_POST['submit'])){
 ?>
 
 <div class="container">
-        <form method="post">
+        <form method="post" id="form">
             <h2>New account</h2>
 
             <div class="input-group">
                 <label>UserName</label>
-                <input type="text" name="username" id="username" placeholder="UserName" onkeyup="validateName()">
-                <span id="username-error"></span>
+                <input type="text" name="username" id="username" placeholder="UserName" >
+                <span id="username-error" style="color: red;"></span>
             </div>
 
             <div class="input-group">
                 <label>Password</label>
-                <input type="password" name="password" id="password" placeholder="Password" onkeyup="validatePass()">
-                <span id="password-error"></span>
+                <input type="password" name="password" id="password" placeholder="Password" >
+                <span id="password-error" style="color: red;"></span>
             </div>
             <div class="input-group">
                 <label>Confirm Password</label>
-                <input type="password" name="Confirmpassword" id="password" placeholder="Confirm Password" onkeyup="validatePass()">
-                <span id="Confirmpassword-error"></span>
+                <input type="password" name="Confirmpassword" id="ConfirmPassword" placeholder="Confirm Password" >
+                <span id="Confirmpassword-error" style="color: red;"></span>
             </div>
-            <input type="submit" name="submit" class="btn" value="Sign-up" onclick="return validateForm()">
-            <span id="submit-error"></span>
+            <input type="submit" name="submit"  class="btn" value="Sign-up" >
+            <span id="submit-error" style="color: red;"></span>
             <a href="index.php">Have an account?</a>
     </div>
+    <script src="./JS/validate2.js"></script>
 </body>
 </html>
