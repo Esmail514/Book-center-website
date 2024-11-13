@@ -5,29 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Book</title>
     <link rel="stylesheet" href="CSS/style.css">
-  <link rel="stylesheet" href="CSS/all.min.css">
-  <link rel="stylesheet" href="CSS/fontawesome.min.css">
 </head>
 <body>
 <div class="container">
-  <form action="" method="post">
+  <form action="" method="post" id="form">
     <h2>Update Book</h2>
 
     <div class="input-group">
       <label>Name</label>
-  <input type="text" name="Item_name" id="item-name" placeholder="Book Name"  value="" onkeyup="validateName()">
-    <span id="Itemname-error"></span>
+  <input type="text" name="name" id="name" placeholder="Book Name">
+    <span id="name-error" style="color: red;"></span>
     </div>
 
     <div class="input-group">
       <label>Book</label>
-      <input type="file" name="item-image" id="item-image" placeholder="Choose the book">
-    <span id="image-error"></span>
+      <input type="file" name="file" id="file" placeholder="Choose a book">
+    <span id="file-error" style="color: red;"></span>
     </div>
     
-    <input type="submit" name="submit" class="btn" value="Update" onclick="return validate()">
-    <span id="submit-error"></span>
+    <input type="submit" name="submit" class="btn" value="Update" >
   </form>
 </div>
+<script src="./JS/addValidate.js"></script>
 </body>
 </html>
