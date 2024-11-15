@@ -12,16 +12,19 @@
 
 <body>
     <table class="content-table">
+        <form method="post">
         <a href="index.php" class="btn">logout</a>
         <span class="yy">|</span> <a href="rejesterAdmin.php" class="Add">Add New Admin</a>
         <a href="add.php" class="btn1">Add book</a> <span class="yy">|</span> 
-        <input type="text" class="search" placeholder="Search"> 
-        <input type="submit" value="Search" class="search">
-        <a href="Home.html">
+        <input type="text" class="search" name="searchInput" placeholder="Search"> 
+        <input type="submit" value="Search" class="search" name="search">
+        </form>
+        <a href="home.php">
             <h2>Book<span class="I">I</span>Center</h2>
         </a>
         <thead>
             <tr>
+            <th scope="col">#</th>
                 <th>ID</th>
                 <th>Name</th>
                 <th>Size</th>
@@ -30,11 +33,22 @@
             </tr>
         </thead>
         <tbody>
+        <?php
+include "connect.php";
+$sql = "SELECT * FROM users";
+$result=mysqli_query($conn,$sql);
+                $i =0;
+                while ($row=mysqli_fetch_assoc($result)) {
+                    $i++;
+
+
+?>
 
             <tr class="active-row">
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><?php echo $i; ?></td>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['username']; ?></td>
+                <td><?php echo $row['password']; ?></td>
 
 
 
@@ -43,9 +57,11 @@
                     <a href="" class="dl"><img src="./img/icon.png"></a>
                 </td>
             </tr>
-
-            <tr>
-                <td colspan="3" style="text-align: center; color: #f00">Data not found</td>
+      <?php
+                }
+      ?>
+          <tr>
+                <td colspan="4" style="text-align: center; color: #f00">Data not found</td>
             </tr>
 
         </tbody>
