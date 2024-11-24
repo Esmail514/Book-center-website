@@ -5,45 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
-    <link rel="stylesheet" href="CSS/style2.css">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="CSS/style3.css">
 
 </head>
 
 <body>
-    <table class="content-table">
-        <a href="index.php" class="btn">logout</a>
-            <h2>Book<span class="I">I</span>Center</h2>
-        
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Size</th>
+    <section class="Menu">
+        <h2 class="title">Menu</h2>
+        <!-- <?php
+                if ($count != 0) {
+                    while ($row = mysqli_fetch_assoc($result)):
+                ?> -->
+        <div class="content">
+            <div class="food-card">
+                <div class="food-image">
+                    <?php echo "<img src='upload/" . $row['item_image'] . "' >"; ?>
+                    <img src="../favicon.ico" alt="">
+                </div>
+                <div class="food-info">
+                    <p class="food-category"><?php echo $row['Item_name']; ?> Esmail</p>
+                    <strong class="food-price">
+                        <?php echo $row['item_price']; ?>500
+                    </strong>
+                </div>
+            </div>
+    <?php
 
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-
-            <tr class="active-row">
-                <td></td>
-                <td></td>
-                <td></td>
-
-
-
-                <td>
-                    <a href="">Download</a>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="3" style="text-align: center; color: #f00">Data not found</td>
-            </tr>
-
-        </tbody>
-    </table>
+                    endwhile;
+                }
+    ?>
+        </div>
+    </section>
 
 </body>
 
