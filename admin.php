@@ -46,7 +46,7 @@
             if (isset($_POST['se'])) {
                 $search = $_POST['search'];
             }
-            $sql = "SELECT * FROM users";
+            $sql = "SELECT * FROM products";
             if (!empty($search)) {
                 $sql .= " WHERE id LIKE '%$search%' OR  username LIKE '%$search%'";
             }
@@ -62,9 +62,9 @@
                     <tr class="active-row">
                         <td><?php echo $i; ?></td>
                         <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['username']; ?></td>
-                        <td><?php echo "\$" . $row['password']; ?></td>
-                        <td><?php echo $i; ?></td>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo "\$" . $row['price']; ?></td>
+                        <td><?php echo"<img src='upload/".$row['photo']."' width='100px' height='100px'>";?></td>
 
 
                         <td>

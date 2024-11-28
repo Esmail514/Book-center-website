@@ -1,0 +1,152 @@
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: green;
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 100px;
+}
+
+.logo {
+  text-decoration: none;
+  color: rgb(236, 223, 205);
+  text-transform: uppercase;
+  font-weight: 450;
+  font-size: 33px;
+}
+.logo span {
+  color: rgb(236, 223, 205);
+}
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  box-shadow: -10px -10px 5px rgba(1, 1, 1, 0.1);
+  border-radius: 10px;
+  width: 40%;
+  padding: 25px;
+  margin: 15px;
+}
+.card:hover {
+  transform: scale(0.9);
+  transition: ease-in-out 0.5s;
+}
+.icon {
+  color: rgb(236, 223, 205);
+  font-size: 128px;
+  text-align: center;
+}
+
+.info {
+  text-align: center;
+}
+
+.Menu {
+  padding-top: 150px;
+  padding-bottom: 50px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.food-card {
+  background-color: white;
+  border: 1px solid #fff;
+  min-height: 100px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 43px;
+  transition: 0.7s ease;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+}
+
+.food-image img {
+  width: 100%;
+  height: 230px;
+}
+
+.food-info {
+  padding: 16px;
+  text-align: center;
+}
+
+.food-category {
+  font-size: 16px;
+  color: black;
+}
+
+.food-price {
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-top: 10px;
+  color: darkblue;
+}
+
+.social-icons a {
+  display: flex;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 48px;
+  margin-left: 120px;
+  padding-bottom: 70px;
+}
+.contatus {
+  background-color: rgb(236, 223, 205);
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+.location {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
+.location iframe {
+  width: 80%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: green;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.footericons a {
+  margin: 10px;
+  line-height: 30px;
+  font-size: 20 px;
+  color: #fff;
+}
+
+.copyrights {
+  margin-top: 5px;
+  padding: 3.5px;
+  border-top: 2px solid rgb(236, 223, 205);
+  font-size: 15px;
+  color: #000000;
+}
+
+.copyrights span {
+  color: rgb(236, 223, 205);
+}
