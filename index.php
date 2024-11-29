@@ -10,6 +10,53 @@
 
 <body>
 
+    <?php
+    include "connect.php";
+
+    
+    if (isset($_POST['submit'])) {
+        $name = $_POST['username'];
+        $pass = $_POST['password'];
+        $userSelect = "SELECT * From users where username = '$name' and password = '$pass'";
+        $adminSelect = "SELECT * From admin where name = '$name' and password = '$pass'";
+        $userResult = mysqli_query($conn, $userSelect);
+        if (mysqli_num_rows($userResult) > 0) {
+            $row1 = mysqli_fetch_array($userResult);
+
+            $_SESSION['id'] = $row1['id'];
+            $_SESSION['username'] = $row1['username'];
+            $_SESSION['password'] = $row1['password'];
+
+            echo "<script language=javascript type=text/javascript>
+
+   self.location.href='home.php?id=$_SESSION[id]';
+
+   </script>";
+        } else if (mysqli_num_rows(mysqli_query($conn, $adminSelect)) != 0) {
+            $row1 = mysqli_fetch_array(mysqli_query($conn, $adminSelect));
+
+            $_SESSION['id'] = $row1['id'];
+            $_SESSION['username'] = $row1['name'];
+            $_SESSION['password'] = $row1['password'];
+
+            echo "<script language=javascript type=text/javascript>
+
+   self.location.href='admin.php?id=$_SESSION[id]';
+
+   </script>";
+        } else {
+            echo "<script>alert('Sorry there is no such a user you have to register first');</script>";
+            echo "<script language=javascript type=text/javascript>
+
+self.location.href='index.php';
+
+</script>";
+        }
+    }
+
+    ?>
+
+
     <div class="container">
         <form method="post" id="form">
             <h2>Login Now</h2>
