@@ -20,43 +20,37 @@ if (isset($_REQUEST['id'])) {
 
     <body>
         <header>
-            <a href="#" class="logo">TIC <span>TAK</span></a>
+            <a href="#" class="logo">Esmail <span>Center</span></a>
+
         </header>
         <section class="Menu">
             <h2 class="title">All Products</h2>
-            <!-- <?php
-                    if ($count != 0) {
-                        while ($row = mysqli_fetch_assoc($result)):
-                    ?> -->
-            <div class="content">
-                <div class="food-card">
-                    <div class="food-image">
-                        <?php echo "<img src='upload/" . $row['photo'] . "' >"; ?>
-                    </div>
-                    <div class="food-info">
-                        <p class="food-category"><?php echo $row['name']; ?></p>
-                        <strong class="food-price">
-                            <?php echo $row['price']; ?>
-                        </strong>
-                    </div>
-                </div>
-        <?php
+            <?php
+            if ($count != 0) {
+                while ($row = mysqli_fetch_assoc($result)):
+            ?>
+                    <div class="content">
+                        <div class="food-card">
 
-                        endwhile;
-                    }
-        ?>
-            </div>
+                            <div class="food-image">
+                                <img src="<?php echo "upload/" . $row['photo'] ?>" alt="Product Photo">
+                            </div>
+                            <div class="food-info">
+                                <p class="food-category"><?php echo $row['name']; ?></p>
+                                <strong class="food-price">
+                                    <?php echo $row['price']; ?>
+                                </strong>
+                            </div>
+                        </div>
+                <?php
+
+                endwhile;
+            }
+                ?>
+                    </div>
         </section>
         <div class="footer">
             <footer>
-                <div>
-                    <div class="footericons">
-                        <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                        <a href=""><i class="fa-solid fa-phone"></i></a>
-                    </div>
-                </div>
                 <div class="copyrights">
                     &copy;copyright @ 2024 <span>Esmail A. Alsayaghi</span> | all rights reversed!
                 </div>
@@ -66,12 +60,6 @@ if (isset($_REQUEST['id'])) {
 } else {
     session_unset();
     session_destroy();
-    echo "<meta http-equiv=\"refresh\" content=\"0;url=index.php\" />";
-}
-if (isset($_POST['logout'])) {
-    session_unset();
-    session_destroy();
-
     echo "<meta http-equiv=\"refresh\" content=\"0;url=index.php\" />";
 }
     ?>
