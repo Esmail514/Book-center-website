@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
 include "connect.php";
-if (isset($_SESSION['id'])) {
+if (isset($_REQUEST['id'])) {
     if (isset($_POST['se'])) {
         $search = $_POST['search'];
     }
@@ -14,7 +14,6 @@ if (isset($_SESSION['id'])) {
         $i = 0;
         while ($row = mysqli_fetch_assoc($result)) {
             $i++;
-
 
 ?>
             <!DOCTYPE html>
@@ -30,10 +29,11 @@ if (isset($_SESSION['id'])) {
 
             <body>
                 <table class="content-table">
+                    
+                    <form action="" method="post">
                     <input type="submit" name="logout" value="logout" class="btn">
                     <span class="yy">|</span> <a href="rejesterAdmin.php" class="Add">Add New Admin</a>
                     <a href="add.php" class="btn1">Add Product</a> <span class="yy">|</span>
-                    <form action="" method="post">
                         <input type="text" name="search" class="search" placeholder="search">
                         <input type="submit" name="se" class="search" value="search">
                     </form>
@@ -83,7 +83,6 @@ if (isset($_SESSION['id'])) {
             session_destroy();
             echo "<meta http-equiv=\"refresh\" content=\"0;url=index.php\" />";
         }
-        mysqli_close($conn);
         if (isset($_POST['logout'])) {
             session_unset();
             session_destroy();
