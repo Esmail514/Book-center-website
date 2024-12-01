@@ -2,7 +2,7 @@
 <?php
 include 'connect.php';
 $table = 'products';
-if (isset($_REQUEST['id'])) {
+if (isset($_SESSION['name'])) {
     $query = "SELECT * FROM $table";
     $result = mysqli_query($conn, $query);
     $count = mysqli_num_rows($result);

@@ -16,6 +16,8 @@
   $table = 'products';
   if (isset($_REQUEST['id'])) {
     $adminID = $_REQUEST['id'];
+    $name = $_REQUEST['name'];
+    $price = $_REQUEST['price'];
     if (isset($_POST['submit'])) {
       $Item_name = $_POST['name'];
       $Item_price = $_POST['price'];
@@ -40,13 +42,13 @@
 
         <div class="input-group">
           <label>Name</label>
-          <input type="text" name="name" id="item-name" placeholder="Book Name">
+          <input type="text" name="name" id="item-name" value="<?php echo $name ?>">
           <span id="Itemname-error" style="color: red;"></span>
         </div>
 
         <div class="input-group">
           <label>Name</label>
-          <input type="text" name="price" id="item-price" placeholder="Price">
+          <input type="text" name="price" id="item-price" value="<?php echo $price ?>" >
           <span id="price-error" style="color: red;"></span>
         </div>
 

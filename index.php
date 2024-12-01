@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +14,7 @@
     <?php
     include "connect.php";
 
-    
+
     if (isset($_POST['submit'])) {
         $name = $_POST['username'];
         $pass = $_POST['password'];
@@ -23,9 +24,8 @@
         if (mysqli_num_rows($userResult) > 0) {
             $row1 = mysqli_fetch_array($userResult);
 
-            $id =  $_SESSION['id'] = $row1['id'];
-            $_SESSION['username'] = $row1['username'];
-            $_SESSION['password'] = $row1['password'];
+            $_SESSION['name'] = $name;
+
 
             echo "<script language=javascript type=text/javascript>
 
@@ -35,15 +35,10 @@
         } else if (mysqli_num_rows(mysqli_query($conn, $adminSelect)) != 0) {
             $row1 = mysqli_fetch_array(mysqli_query($conn, $adminSelect));
 
-            $id =  $_SESSION['id'] = $row1['id'];
-            $_SESSION['username'] = $row1['name'];
-            $_SESSION['password'] = $row1['password'];
+            $_SESSION['name'] = $name;
 
-            echo "<script language=javascript type=text/javascript>
 
-   self.location.href='admin.php?id=$id';
-
-   </script>";
+            header("Location: admin.php");
         } else {
             echo "<script>alert('Sorry there is no such a user you have to register first');</script>";
             echo "<script language=javascript type=text/javascript>

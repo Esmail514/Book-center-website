@@ -1,8 +1,14 @@
 <?php session_start(); ?>
 <?php
 include "connect.php";
-if (isset($_REQUEST['id'])) {
-    $id = $_REQUEST['id'];
+$name = $_SESSION['name'];
+if(isset($name)){
+    echo "";
+}else{
+    header("Location: index.php");
+}
+
+
 
 ?>
     <!DOCTYPE html>
@@ -66,7 +72,7 @@ if (isset($_REQUEST['id'])) {
 
 
                             <td>
-                                <a href="edit.php?id=<?php echo $row['id']; ?>" class="mod"><img src="./img/mod.png"></a> |
+                                <a href="edit.php?id=<?php echo $row['id']; ?>&name=<?php echo $row['name']; ?>&price=<?php echo $row['price']; ?>" class="mod"><img src="./img/mod.png"></a> |
                                 <a href="delete.php?id=<?php echo $row['id']; ?>" class="dl"><img src="./img/icon.png"></a>
                             </td>
                         </tr>
@@ -81,11 +87,7 @@ if (isset($_REQUEST['id'])) {
                     </tr>
             <?php
                 }
-            } else {
-                session_unset();
-                session_destroy();
-                echo "<meta http-equiv=\"refresh\" content=\"0;url=index.php\" />";
-            }
+             
             if (isset($_POST['logout'])) {
                 session_unset();
                 session_destroy();
