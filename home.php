@@ -29,25 +29,27 @@ if (isset($_REQUEST['id'])) {
             if ($count != 0) {
                 while ($row = mysqli_fetch_assoc($result)):
             ?>
-                    <div class="content">
-                        <div class="food-card">
+                    <a href="#">
+                        <div class="content">
+                            <div class="food-card">
 
-                            <div class="food-image">
-                                <img src="<?php echo "upload/" . $row['photo'] ?>" alt="Product Photo">
+                                <div class="food-image">
+                                    <img src="<?php echo "upload/" . $row['photo'] ?>" alt="Product Photo">
+                                </div>
+                                <div class="food-info">
+                                    <p class="food-category"><?php echo $row['name']; ?></p>
+                                    <strong class="food-price">
+                                        <?php echo $row['price']; ?>
+                                    </strong>
+                                </div>
                             </div>
-                            <div class="food-info">
-                                <p class="food-category"><?php echo $row['name']; ?></p>
-                                <strong class="food-price">
-                                    <?php echo $row['price']; ?>
-                                </strong>
-                            </div>
-                        </div>
-                <?php
+                    </a>
+            <?php
 
                 endwhile;
             }
-                ?>
-                    </div>
+            ?>
+            </div>
         </section>
         <div class="footer">
             <footer>

@@ -40,20 +40,20 @@
 
         <div class="input-group">
           <label>Name</label>
-          <input type="text" name="name" id="name" placeholder="Book Name">
-          <span id="name-error" style="color: red;"></span>
+          <input type="text" name="name" id="item-name" placeholder="Book Name">
+          <span id="Itemname-error" style="color: red;"></span>
         </div>
 
         <div class="input-group">
           <label>Name</label>
-          <input type="text" name="price" id="price" placeholder="Price">
+          <input type="text" name="price" id="item-price" placeholder="Price">
           <span id="price-error" style="color: red;"></span>
         </div>
 
         <div class="input-group">
           <label>Book</label>
-          <input type="file" name="item-image" id="item-image" placeholder="Choose a Product">
-          <span id="file-error" style="color: red;"></span>
+          <input type="file" name="item-image" id="image" placeholder="Choose a Product">
+          <span id="image-error" style="color: red;"></span>
         </div>
 
         <input type="submit" name="submit" class="btn" value="Update">

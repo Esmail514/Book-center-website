@@ -21,10 +21,10 @@ form.addEventListener("submit", (e) => {
   if (password.value === "" || password.value == null) {
     e.preventDefault();
     passwordError.innerHTML = "Enter Password";
-  }  else {
+  } else {
     passwordError.innerHTML = "";
   }
-  
+
   if (password.value != confirmPassword.value) {
     e.preventDefault();
     passwordError.innerHTML = "--";
