@@ -14,7 +14,7 @@
     <?php
     include 'connect.php';
     $table = "admin";
-    if (isset($_REQUEST['id'])) {
+    if (isset($_SESSION['id'])) {
         $id = $_REQUEST['id'];
         if (isset($_POST['submit'])) {
             $name = $_POST['username'];
